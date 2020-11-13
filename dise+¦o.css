@@ -1,0 +1,21 @@
+/* CABECERA */
+.cabecera{
+	font-size: 34pt;  
+	color: #ECF0F1;
+}	
+
+.titulo{
+	
+}
+
+.logo{
+	width:10%;
+	height:10%;
+}
+
+
+/* INDEX2 */
+.fondo{
+	background-image: url(images/istockphoto-881770444-170667a.jpg);
+}
+
