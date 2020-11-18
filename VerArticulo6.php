@@ -1,48 +1,59 @@
+<?php
+include('assets/data/connect_db.php');
+
+$obj=new Conexion;
+
+$res = $obj->buscarProducto();
+
+$tem = array();
+$tem = $res;
+
+/*print("Id producto ".$tem[1]['id_products'].'<br>');
+print("Nombre ".$tem[1]['name'].'<br>');
+print("Precio venta ".$tem[1]['price_venta'].'<br>');
+print($tem[1]['url_img']);*/
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articulo1</title>
-     <!-- Required meta tags -->
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-	<style>
-        
+    <title>Document</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jPACed7t18qUEh2b8s3_m7pkjFq_RPZPmMNQplbrCFTFB7LKtQrSlYkb0AA3cew3oEhAGJUa4S0fq94C9QJeE5gNrWMiPQTxA2ugvBA9jYvf0xDAoqOUeLR2ZHrY9YE_MxdFjWKAVCzhjZHxmmXN-_OwbnUcfiwv_5lfa2SY81Sipm1cdMkSKBm4oDrstbuc3opmpI6io8-WcU9cYProLVXC6mox9HHxaFYeBVT0g5PAj_3t4Hkpu_nA56_x7EOdr77IwGgycBcXG3OFl9gdQEz2JwJCBo1o_SPf2ZDiFxZk2z1aiDNSsKp6lAz2KB12PL1AU9h6EV741Aw1L3wRUA"
+        charset="UTF-8"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <style>
         body {
-           
-            background:#CADEE7;
+            background: #CADEE7;
         }
         
         .btn1:hover {
             border: none;
-           
             background-color: black;
             color: white;
-            
         }
         
         .btn1 {
             background: white;
             border: 1px solid;
-            color: black; 
+            color: black;
             outline: none;
             height: 50px;
             width: 100%;
             border-radius: 4px;
             font-weight: bold;
         }
-    </style>  
-
+    </style>
 </head>
 
 <body>
-     <!-- Barra de navegacion-->
+    <!-- Barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">MIZTLY</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +65,10 @@
                     <a class="nav-link" href="index2.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Carrito/products.php">Carrito</a>
+                    <a class="nav-link" href="Carrito/index.php">Carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Cerrar sesion</a>
@@ -66,16 +80,19 @@
 
 <div class="card-deck">
     <div>
-        <img src="imagenes/art1.jpg" class="rounded float-left" alt="articulo1" style="padding: 3rem;">
+        <?php
+            echo '<img src="'.$tem[5]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
+        ?>
     </div>
 
     <div>
-
-        <h1 style="padding-top: 3rem;">Conjunto Top</h1>
-
-        <h3>Top de tirante de cuadros con falda delgada</h3>
-        <h3 style="color: red; ">212,00 MXN.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Ullam at eaque aspernatur, temporibus harum sequi omnis dolores rem dolore nostrum,<br> illum voluptas sapiente cupiditate ea expedita molestias quia cumque dignissimos!</p>
+    <?php
+         echo '<h1 style="padding-top: 3rem;">'.$tem[5]['name'].'</h1>'; 
+    
+         echo '<h3>'.$tem[5]['description'].'</h3>'; 
+         echo '<h3 style="color: red; ">'.$tem[5]['price_venta'].',00 MXN.</h3>'; 
+         echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Ullam at eaque aspernatur, temporibus harum sequi omnis dolores rem dolore nostrum,<br> illum voluptas sapiente cupiditate ea expedita molestias quia cumque dignissimos!</p>'; 
+        ?>
         <br>
         <div>
 
@@ -110,10 +127,8 @@
             <input type="number" id="quantity_5f187892d9557" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" inputmode="numeric">
 
             <br><br>
-             <button type="button" class="btn1 mt-3 mb-5"><a style="decoration:none" href="Carrito/index.php">Añadir al carrito</a></button>
+            <button type="button" class="btn1 mt-3 mb-5"><a style="decoration:none" href="Carrito/index.php">Añadir al carrito</a></button>
         </div>
     </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 </html>

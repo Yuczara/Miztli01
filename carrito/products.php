@@ -1,4 +1,20 @@
 <?php
+include('assets/data/connect_db.php');
+
+$obj=new Conexion;
+
+$res = $obj->buscarProducto();
+
+$tem = array();
+$tem = $res;
+
+/*print("Id producto ".$tem[1]['id_products'].'<br>');
+print("Nombre ".$tem[1]['name'].'<br>');
+print("Precio venta ".$tem[1]['price_venta'].'<br>');
+print($tem[1]['url_img']);*/
+
+?>
+<?php
 
 	if(isset($_GET['action']) && $_GET['action']=="add"){
 		
@@ -10,10 +26,10 @@
 			
 		}else{
 			
-					$server="sql304.tonohost.com";
-					$user="ottos_26480476";
-					$password="littlemonster1021";
-					$db="ottos_26480476_miztli";
+					$server="localhost";
+					$user="root";
+					$password="";
+					$db="miztli";
 					$union=mysqli_connect($server, $user, $password, $db);
 
 					
@@ -50,17 +66,18 @@
 	?>[]
 			<table>
 			    <tr>
-			        <th>Name</th>
-			        <th>Description</th>
-			        <th>Price</th>
+					<th>Nombre</th>
+					<th>Foto</th>
+			        <th>Descripcion</th>
+			        <th>Precio</th>
 			        <th>Action</th>
 			    </tr>
 			    
 				<?php
-					$server="sql304.tonohost.com";
-					$user="ottos_26480476";
-					$password="littlemonster1021";
-					$db="ottos_26480476_miztli";
+					$server="localhost";
+					$user="root";
+					$password="";
+					$db="miztli";
 					$union=mysqli_connect($server, $user, $password, $db);
 
 				
@@ -70,7 +87,8 @@
 						
 				?>
 						<tr>
-						    <td><?php echo $row['name'] ?></td>
+							<td><?php echo $row['name'] ?></td>
+							<td><?php echo $row['name'] ?></td>
 						    <td><?php echo $row['description'] ?></td>
 						    <td><?php echo $row['price'] ?>$</td>
 						    <td><a href="index.php?page=products&action=add&id=<?php echo $row['id_product'] ?>">Add to cart</a></td>

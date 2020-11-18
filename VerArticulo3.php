@@ -1,3 +1,19 @@
+<?php
+include('assets/data/connect_db.php');
+
+$obj=new Conexion;
+
+$res = $obj->buscarProducto();
+
+$tem = array();
+$tem = $res;
+
+/*print("Id producto ".$tem[1]['id_products'].'<br>');
+print("Nombre ".$tem[1]['name'].'<br>');
+print("Precio venta ".$tem[1]['price_venta'].'<br>');
+print($tem[1]['url_img']);*/
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,37 +28,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
-	<style>
-        
+    <style>
         body {
-            background:#CADEE7;
-            
+            background: #CADEE7;
         }
         
         .btn1:hover {
             border: none;
-           
             background-color: black;
             color: white;
-            
         }
         
         .btn1 {
             background: white;
             border: 1px solid;
-            color: black; 
+            color: black;
             outline: none;
             height: 50px;
             width: 100%;
             border-radius: 4px;
             font-weight: bold;
         }
-         
-    </style>  
+    </style>
 </head>
 
 <body>
-     <!-- Barra de navegacion-->
+
+    <!-- Barra de navegacion-->
+    <!-- Barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">MIZTLY</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +67,10 @@
                     <a class="nav-link" href="index2.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Carrito/index.php">Carrito</a>
+                    <a class="nav-link" href="Carrito/products.php">Carrito</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Cerrar sesion</a>
@@ -66,16 +82,19 @@
 
 <div class="card-deck">
     <div>
-        <img src="imagenes/art6.PNG" class="rounded float-left" alt="articulo1" style="padding: 3rem;">
+        <?php
+            echo '<img src="'.$tem[2]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
+        ?>
     </div>
 
     <div>
-
-        <h1 style="padding-top: 3rem;">Vestido estampado floral</h1>
-
-        <h3>Vestido con estampado floral de margarita.</h3>
-        <h3 style="color: red; ">286,00 MXN.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Ullam at eaque aspernatur, temporibus harum sequi omnis dolores rem dolore nostrum,<br> illum voluptas sapiente cupiditate ea expedita molestias quia cumque dignissimos!</p>
+    <?php
+         echo '<h1 style="padding-top: 3rem;">'.$tem[2]['name'].'</h1>'; 
+    
+         echo '<h3>'.$tem[2]['description'].'</h3>'; 
+         echo '<h3 style="color: red; ">'.$tem[2]['price_venta'].',00 MXN.</h3>'; 
+         echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Ullam at eaque aspernatur, temporibus harum sequi omnis dolores rem dolore nostrum,<br> illum voluptas sapiente cupiditate ea expedita molestias quia cumque dignissimos!</p>'; 
+        ?>
         <br>
         <div>
 
