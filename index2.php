@@ -94,7 +94,7 @@ print($tem[1]['url_img']);*/
             echo '<p class="card-text ">'.$tem[0]['description'].'</p>';
             echo '<p class="card-text ">'.$tem[0]['price_venta'].',00 MXN</p>';
              ?> 
-                <a href="VerArticulo.html" class="btn btn-primary">Ver Articulo</a>
+                <a href="VerArticulo.php" class="btn btn-primary">Ver Articulo</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;margin-bottom: 2rem;">
@@ -105,7 +105,7 @@ print($tem[1]['url_img']);*/
             echo '<p class="card-text ">'.$tem[1]['description'].'</p>';
             echo '<p class="card-text ">'.$tem[1]['price_venta'].',00 MXN</p>';
              ?> 
-                <a href="VerArticulo2.html" class="btn btn-primary">Ver Articulo</a>
+                <a href="VerArticulo2.php" class="btn btn-primary">Ver Articulo</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;margin-bottom: 2rem;">
@@ -116,7 +116,7 @@ print($tem[1]['url_img']);*/
             echo '<p class="card-text ">'.$tem[2]['description'].'</p>';
             echo '<p class="card-text ">'.$tem[2]['price_venta'].',00 MXN</p>';
              ?> 
-                <a href="VerArticulo3.html" class="btn btn-primary">Ver Articulo</a>
+                <a href="VerArticulo3.php" class="btn btn-primary">Ver Articulo</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;margin-right: 2rem;margin-bottom: 2rem;">
@@ -127,7 +127,7 @@ print($tem[1]['url_img']);*/
             echo '<p class="card-text ">'.$tem[3]['description'].'</p>';
             echo '<p class="card-text ">'.$tem[3]['price_venta'].',00 MXN</p>';
              ?> 
-                <a href="VerArticulo4.html" class="btn btn-primary">Ver Articulo</a>
+                <a href="VerArticulo4.php" class="btn btn-primary">Ver Articulo</a>
             </div>
         </div>
     </div>
@@ -141,7 +141,7 @@ print($tem[1]['url_img']);*/
             echo '<p class="card-text ">'.$tem[4]['description'].'</p>';
             echo '<p class="card-text ">'.$tem[4]['price_venta'].',00 MXN</p>';
              ?> 
-                <a href="VerArticulo5.html " class="btn btn-primary ">Ver Articulo</a>
+                <a href="VerArticulo5.php " class="btn btn-primary ">Ver Articulo</a>
             </div>
         </div>
         <div class="card " style="width: 18rem;margin-bottom: 2rem; ">
@@ -152,7 +152,7 @@ print($tem[1]['url_img']);*/
             echo '<p class="card-text ">'.$tem[5]['description'].'</p>';
             echo '<p class="card-text ">'.$tem[5]['price_venta'].',00 MXN</p>';
              ?> 
-                <a href="VerArticulo6.html " class="btn btn-primary ">Ver Articulo</a>
+                <a href="VerArticulo6.php " class="btn btn-primary ">Ver Articulo</a>
             </div>
         </div>
         <div class="card " style="width: 18rem;margin-bottom: 2rem; ">
@@ -163,7 +163,7 @@ print($tem[1]['url_img']);*/
             echo '<p class="card-text ">'.$tem[6]['description'].'</p>';
             echo '<p class="card-text ">'.$tem[6]['price_venta'].',00 MXN</p>';
              ?> 
-                <a href="VerArticulo7.html " class="btn btn-primary ">Ver Articulo</a>
+                <a href="VerArticulo7.php " class="btn btn-primary ">Ver Articulo</a>
             </div>
         </div>
         <div class="card " style="width: 18rem;margin-right: 2rem;margin-bottom: 2rem; ">
@@ -174,7 +174,7 @@ print($tem[1]['url_img']);*/
             echo '<p class="card-text ">'.$tem[7]['description'].'</p>';
             echo '<p class="card-text ">'.$tem[7]['price_venta'].',00 MXN</p>';
              ?> 
-                <a href="VerArticulo8.html " class="btn btn-primary ">Ver Articulo</a>
+                <a href="VerArticulo8.php " class="btn btn-primary ">Ver Articulo</a>
             </div>
         </div>
     </div>

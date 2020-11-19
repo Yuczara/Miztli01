@@ -23,22 +23,7 @@
 
 ?>
 
-<?php
-include('assets/data/connect_db.php');
 
-$obj=new Conexion;
-
-$res = $obj->buscarProducto();
-
-$tem = array();
-$tem = $res;
-
-/*print("Id producto ".$tem[1]['id_products'].'<br>');
-print("Nombre ".$tem[1]['name'].'<br>');
-print("Precio venta ".$tem[1]['price_venta'].'<br>');
-print($tem[1]['url_img']);*/
-
-?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

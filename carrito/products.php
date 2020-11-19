@@ -1,19 +1,4 @@
-<?php
-include('assets/data/connect_db.php');
 
-$obj=new Conexion;
-
-$res = $obj->buscarProducto();
-
-$tem = array();
-$tem = $res;
-
-/*print("Id producto ".$tem[1]['id_products'].'<br>');
-print("Nombre ".$tem[1]['name'].'<br>');
-print("Precio venta ".$tem[1]['price_venta'].'<br>');
-print($tem[1]['url_img']);*/
-
-?>
 <?php
 
 	if(isset($_GET['action']) && $_GET['action']=="add"){
@@ -43,7 +28,7 @@ print($tem[1]['url_img']);*/
 				
 				$_SESSION['cart'][$row_s['id_product']]=array(
 						"quantity" => 1,
-						"price" => $row_s['price']
+						"price" => $row_s['price_venta']
 					);
 				
 				
@@ -58,7 +43,15 @@ print($tem[1]['url_img']);*/
 	}
 
 ?>
-	<h1>Product List</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<h1>Product List</h1>
 	<?php
 		if(isset($message)){
 			echo "<h2>$message</h2>";
@@ -66,8 +59,8 @@ print($tem[1]['url_img']);*/
 	?>[]
 			<table>
 			    <tr>
-					<th>Nombre</th>
 					<th>Foto</th>
+					<th>Nombre</th>
 			        <th>Descripcion</th>
 			        <th>Precio</th>
 			        <th>Action</th>
@@ -87,10 +80,10 @@ print($tem[1]['url_img']);*/
 						
 				?>
 						<tr>
-							<td><?php echo $row['name'] ?></td>
-							<td><?php echo $row['name'] ?></td>
-						    <td><?php echo $row['description'] ?></td>
-						    <td><?php echo $row['price'] ?>$</td>
+							<td><?php echo '<img src="../'.$row['url_img'].'" width="80">';?></td>
+						    <td><?php echo $row['name'] ?></td>
+							<td><?php echo $row['description'] ?></td>
+						    <td><?php echo '$'.$row['price_venta'];?></td>
 						    <td><a href="index.php?page=products&action=add&id=<?php echo $row['id_product'] ?>">Add to cart</a></td>
 						</tr>
 				<?php
@@ -100,3 +93,6 @@ print($tem[1]['url_img']);*/
 				?>
 			    
 			</table>
+</body>
+</html>
+	
