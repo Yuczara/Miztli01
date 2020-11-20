@@ -48,7 +48,7 @@ print($tem[1]['url_img']);*/
                     <a class="nav-link" href="Carrito/products.php">Carrito</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="contacto/Contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Cerrar sesion</a>

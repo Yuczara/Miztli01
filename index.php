@@ -32,6 +32,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="indexr.php">iniciar sesion</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="acercade.php">Acerca de</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -64,6 +67,12 @@
             <div class="carousel-item">
                 <img src="filosofia_miztli/6.PNG" class="d-block w-100" alt="anuncio3">
             </div>
+            <div class="carousel-item">
+                <img src="filosofia_miztli/7.PNG" class="d-block w-100" alt="anuncio3">
+            </div>
+            <div class="carousel-item">
+                <img src="filosofia_miztli/8.PNG" class="d-block w-100" alt="anuncio3">
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -74,29 +83,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-<section class="contenedor seccion">
 
-        <h2 class="fw-300 centrar-texto">NUESTRA FILOSOFÍA<h2>
-        <div class="iconos-nosotros">
-
-            <div>
-                <div class="icono">
-
-                <h3 class="encabezado mayusculas subrayado">MISIÓN</h3>
-                <p>Somos una empresa preocupada por la economía de pequeños comerciantes, nuestra misión es ayudar a contrarestar los estragos 
-                    que ha dejado la cuarentena, ofreciendo el servicio de compra y venta en nuestra página web... </p>
-            </div>
-
-            <div>
-<div class="icono">
-                <h3 class="encabezado">VISIÓN</h3>
-                <p>Nuestra visión es llegar a los negocios a donde estén, proporcionando un sitio web que sea facíl y entendible 
-                    para todas las personas sin importar la edad.Ser la plataforma líder en ventas por línea y abastecer las necesidades 
-                    tanto de compradores como vendedores.</p>
-            </div>
-        </div>
-
-    </section>
 </div>
     <!--Registrate-->
     <div class="jumbotron  margin-left:3rem">
