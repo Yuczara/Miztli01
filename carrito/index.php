@@ -59,11 +59,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="../index2.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../Carrito/products.php">Carrito</a>
-				</li>
+               
 				<li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="../Contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php">Cerrar sesion</a>

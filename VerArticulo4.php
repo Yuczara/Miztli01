@@ -69,7 +69,7 @@ print($tem[1]['url_img']);*/
                     <a class="nav-link" href="Carrito/products.php">Carrito</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="contacto/Contacto.html">Contacto</a>
+                <a class="nav-link" href="Contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Cerrar sesion</a>
@@ -80,7 +80,7 @@ print($tem[1]['url_img']);*/
 </body>
 
 <div class="card-deck">
-    <div>
+<div><a href="detalle4.html">
         <?php
             echo '<img src="'.$tem[3]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
         ?>
