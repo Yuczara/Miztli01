@@ -80,10 +80,11 @@ print($tem[1]['url_img']);*/
 
 
 <div class="card-deck">
-    <div>
+<div><a href="detalle8.html">
         <?php
             echo '<img src="'.$tem[7]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
         ?>
+        </a>
     </div>
 
     <div>
@@ -96,40 +97,39 @@ print($tem[1]['url_img']);*/
         ?>
         <br>
         <div>
-            <h3>Tallas</h3>
+        <h3>Tallas</h3>
 
-            <div class="btn-group mb-3 text-right" role="group">
-                <form>
-                    <div class=" input-group-prepend ">
-                        <button class="btn btn-outline-secondary " type="xs " id="button-addon1 ">XS</button>
-                    </div>
+<div class="btn-group mb-3 text-right" role="group">
 
-                    <div class="input-group-prepend ">
-                        <button class="btn btn-outline-secondary " type="sh " id="button-addon1 ">SH</button>
-                    </div>
-
-                    <div class="input-group-prepend ">
-                        <button class="btn btn-outline-secondary " type="m " id="button-addon1 ">M</button>
-                    </div>
-
-                    <div class="input-group-prepend ">
-                        <button class="btn btn-outline-secondary " type="l " id="button-addon1 ">L</button>
-                    </div>
-
-                    <div class="input-group-prepend ">
-                        <button class="btn btn-outline-secondary " type="xl " id="button-addon1 ">XL</button>
-                    </div>
-
-            </div>
-
-            <br>
-            <h3>Piezas</h3>
-            <input type="number" id="quantity_5f187892d9557" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" inputmode="numeric">
-
-            <br><br>
-            <button type="submit" class="btn1 mt-3 mb-5"><a style="decoration:none" href="Carrito/index.php">Añadir al carrito</a></button>
-            </form>
-        </div>
+    <div class=" input-group-prepend ">
+        <button class="btn btn-outline-secondary " type="xs " id="button-addon1 ">XS</button>
     </div>
+
+    <div class="input-group-prepend ">
+        <button class="btn btn-outline-secondary " type="sh " id="button-addon1 ">SH</button>
+    </div>
+
+    <div class="input-group-prepend ">
+        <button class="btn btn-outline-secondary " type="m " id="button-addon1 ">M</button>
+    </div>
+
+    <div class="input-group-prepend ">
+        <button class="btn btn-outline-secondary " type="l " id="button-addon1 ">L</button>
+    </div>
+
+    <div class="input-group-prepend ">
+        <button class="btn btn-outline-secondary " type="xl " id="button-addon1 ">XL</button>
+    </div>
+
+</div>
+
+<br>
+<h3>Piezas</h3>
+<input type="number" id="quantity_5f187892d9557" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" inputmode="numeric">
+
+<br><br>
+<button type="button" class="btn1 mt-3 mb-5"><a style="decoration:none" href="Carrito/index.php">Añadir al carrito</a></button>
+</div>
+</div>
 
 </html>

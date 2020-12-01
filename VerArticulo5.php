@@ -79,12 +79,12 @@ print($tem[1]['url_img']);*/
 </body>
 
 <div class="card-deck">
-    <div>
+<div><a href="detalle5.html">
         <?php
             echo '<img src="'.$tem[4]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
         ?>
     </div>
-
+</a>
     <div>
     <?php
          echo '<h1 style="padding-top: 3rem;">'.$tem[4]['name'].'</h1>'; 

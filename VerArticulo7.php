@@ -80,10 +80,11 @@ print($tem[1]['url_img']);*/
 </body>
 
 <div class="card-deck">
-    <div>
+<div><a href="detalle7.html">
         <?php
             echo '<img src="'.$tem[6]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
         ?>
+        </a>
     </div>
 
     <div>

@@ -1,5 +1,5 @@
 <?php
-include('assets/data/connect_db.php');
+include('../data/connect_db.php');
 
 $obj=new Conexion;
 
@@ -62,13 +62,13 @@ print($tem[1]['url_img']);*/
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index2.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../carrito/index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Carrito/index.php">Carrito</a>
+                    <a class="nav-link" href="../../Contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="Contacto.html">Contacto</a>
+                    <a class="nav-link" href="../carrito/VerCarta.php">Carrito</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Cerrar sesion</a>
@@ -81,7 +81,7 @@ print($tem[1]['url_img']);*/
 <div class="card-deck">
 <div><a href="detalle6.html">
         <?php
-            echo '<img src="'.$tem[5]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
+            echo '<img src="../'.$tem[5]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
         ?>
         </a>
     </div>

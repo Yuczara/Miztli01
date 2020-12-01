@@ -81,15 +81,6 @@
 					return $registros;
 				
 			}
-			function insertarComentario($name,$email,$asunto,$msg){
-				$con = $this->conectar();
-		
-				$stmt = $con->prepare('INSERT INTO comentarios(fecha,id,nombre,correo,asunto,mensaje) VALUES (NULL,NULL,:names, :email, :asunto, :msg)');
-				$rows = $stmt->execute(array(':names'=>$name,
-											':email'=>$email,
-											':asunto'=>$asunto,
-											':msg'=>$msg));
-				return $rows;
-			  }
+			
 		}
 			?>

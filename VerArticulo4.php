@@ -85,7 +85,7 @@ print($tem[1]['url_img']);*/
             echo '<img src="'.$tem[3]['url_img'].'" class="rounded float-left" alt="articulo1" style="padding: 3rem;">';     
         ?>
     </div>
-
+    </a>
     <div>
     <?php
          echo '<h1 style="padding-top: 3rem;">'.$tem[3]['name'].'</h1>'; 
