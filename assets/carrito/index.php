@@ -72,16 +72,7 @@ include 'Configuracion.php';
         </a>
     </div>
     <br><br>
-<!--<div class="container">
-<div class="panel panel-default">
-<div class="panel-heading"> 
 
-<ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="index.php">Inicio</a></li>
-  <li role="presentation"><a href="VerCarta.php">Ver Carta</a></li>
-  <li role="presentation"><a href="Pagos.php">Pagos</a></li>
-</ul>
-</div>-->
 <div class="card-deck">
         <?php
         //get rows query
@@ -98,7 +89,6 @@ include 'Configuracion.php';
                 echo '<p class="card-text ">'. $row['description'].'</p>';
                 echo '<p class="card-text ">'. $row['price_venta'].',00 MXN</p>';
                  ?> 
-                <a class="btn btn-success mb-4" href="AccionCarta.php?action=addToCart&id_products=<?php echo $row["id_products"]; ?>">Añade al carrito</a>  
                 <a class="btn btn-success mb-4" href="../<?php echo $row["link"]; ?>">Ver Articulo</a>                  
              </div>
             </div>
@@ -112,28 +102,3 @@ include 'Configuracion.php';
         </div>
 </body>
 </html>
-<!--
-
-</div>  
-<div class="item col-lg-4">
-            <div class="thumbnail">
-                <div class="caption">
-                    <h4 class="list-group-item-heading"><?php echo $row["name"]; ?></h4><br>
-                <div class="row">
-                <div class="col-md-6">
-                    <img src="../../<?php echo $row["url_img"]?>"  style="max-width:40%;width:auto;height:auto;" >
-                 </div> 
-                 </div> 
-                    <div class="row">
-                        <div class="col-md-6">
-                        <p class="list-group-item-text"><?php echo $row["description"]; ?></p>
-                            <p class="lead"><?php echo '$'.$row["price_venta"].' USD'; ?></p>
-                            <a class="btn btn-success" href="AccionCarta.php?action=addToCart&id_products=<?php echo $row["id_products"]; ?>">Agregar a la Carta</a>
-                       
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        

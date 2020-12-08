@@ -127,7 +127,7 @@
 
         function testAPI() { // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
             console.log('Bienvenido!  Recuperando su informaión.... ');
-            location.href = "index2.php";
+            location.href = "assets/carrito/index.php";
             FB.api('/me', {
                 fields: 'name,email,picture.type(large)'
             }, function(response) {

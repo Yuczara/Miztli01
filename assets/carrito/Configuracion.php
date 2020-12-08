@@ -1,9 +1,9 @@
 <?php
 //DB details
-$dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'miztli';
+$dbHost = 'sql304.tonohost.com';
+$dbUsername = 'ottos_26480476';
+$dbPassword = 'littlemonster1021';
+$dbName = 'ottos_26480476_miztli';
 
 //Create connection and select DB
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);

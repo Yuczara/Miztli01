@@ -57,7 +57,7 @@ $custRow = $query->fetch_assoc();
     <thead>
         <tr>
             <th>Producto</th>
-            <th>imagen</th>
+            <th>nombre</th>
             <th>Precio</th>
             <th>Cantidad</th>
             <th>Sub total</th>
@@ -71,8 +71,8 @@ $custRow = $query->fetch_assoc();
             foreach($cartItems as $item){
         ?>
         <tr>
+            <td><?php echo '<img src="../'. $item['url_img'].'" height="35%" align="center">'; ?></td>
             <td><?php echo $item["name"]; ?></td>
-            <td><?php echo $item["url_img"]; ?></td>
             <td><?php echo '$'.$item["price_venta"].' USD'; ?></td>
             <td><?php echo $item["qty"]; ?></td>
             <td><?php echo '$'.$item["subtotal"].' USD'; ?></td>

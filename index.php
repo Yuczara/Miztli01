@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+
+    <!--MAPA---->
+       <link rel="stylesheet" href="assets/css/estilosMapa.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB40gI7Ku6shNB9vaNQ-nxEjGIVISkaz8&callback=initMap&libraries=&v=weekly" defer></script>
+    <script src="js/mapaApi.js"></script>
+
   </head>
 <style>
     body {
@@ -32,8 +38,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="indexr.php">iniciar sesion</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="acercade.php">Acerca de</a>
+                 <li class="nav-item">
+                    <a class="nav-link" href="assets/mapa/index.html">Nuestras Oficinas</a>
                 </li>
             </ul>
         </div>
@@ -85,6 +91,11 @@
     </div>
 
 </div>
+
+
+    
+
+
     <!--Registrate-->
     <div class="jumbotron  margin-left:3rem">
         <h1 class="display-4 ">!Unete!</h1>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de lugares</title>
+    <link rel="stylesheet" href="css/estilosMapa.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpZOqXBl188so5Zib5IgYmb-MtrNVquEk&callback=initMap&libraries=places" defer></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	
+    <script>
+        "use strict";
+
+        let map;
+        let service;
+        let infoWindow;
+
+        function initMap() {
+            const paris = new google.maps.LatLng(20.38764, -100.01098);
+
+            infoWindow = new google.maps.InfoWindow();
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: paris,
+                zoom: 18
+            });
+
+            const request = {
+                query: "Basílica de la Sagrada Família",
+                fields: ["name", "geometry"]
+            };
+
+            service = new google.maps.places.PlacesService(map);
+
+            service.findPlaceFromQuery(request, (results, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    for (let i = 0; i < results.length; i++) {
+                        createMarker(results[i]);
+                    }
+
+                    map.setCenter(results[0].geometry.location);
+                }
+            });
+        } //END InitMap
+
+        function createMarker(place) {
+            const marker = new google.maps.Marker({
+                map,
+                position: place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, "click", () => {
+                infoWindow.setContent(place.name);
+                infoWindow.open(map, marker);
+            });
+        }
+    </script>
+
+<style>
+    body {
+            background:#b2d7e5;
+            
+        }
+</style>
+</head>
+
+<body><!-- Barra de navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MIZTLY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../index.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                 <li class="nav-item active">
+                    <a class="nav-link" href="../../indexr.php">Iniciar sesion <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenedor del mapa -->
+    <center>
+        <h1>Oficinas de Miztli<h1>
+    <div id="map"></div>
+    <center>
+</body>
+
+</html>

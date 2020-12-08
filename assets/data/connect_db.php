@@ -20,9 +20,9 @@
 			function conectar(){
 				$conn = null;
 			 try{
-				$conn = new PDO('mysql:host=localhost;dbname=miztli', 
-									'root',
-									 '');
+				$conn = new PDO('mysql:host=sql304.tonohost.com;dbname=ottos_26480476_miztli', 
+									'ottos_26480476',
+									 'littlemonster1021');
 				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				
 				//echo 'Se estableció la conexión <br> <br>';

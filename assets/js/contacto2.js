@@ -10,7 +10,7 @@ $(document).ready(function() {
     async function agregarDatos() {
         const datos = new FormData(document.getElementById('coment'));
 
-        await fetch('assets/data/Contacto.php', {
+        await fetch('../assets/data/Contacto.php', {
             method: 'POST',
             body: datos
         })
